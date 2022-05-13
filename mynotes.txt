@@ -1,0 +1,19 @@
+-Il progetto dovrà essere ESTENDIBILE, ovvero dovrà
+prevedere l'aggiunta di nuovi comandi e nuove funzionalità in modo
+facile e veloce (senza modificare il codice esistente)
+-Il pattern MVC è applicato e con esso il vantaggio della
+MODULARITA' (il progetto è diviso in parti che rappresentano
+gruppi di responsabilità diverse)
+
+STRUTTURA PROGETTO
+
+MODEL:
+-Canvas
+-Cursore
+
+VIEW:
+-GUI (JavaFX)
+-Text input per comandi
+
+CONTROLLER:
+-Interprete dei comandi

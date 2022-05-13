@@ -1,0 +1,53 @@
+L'utente impartisce comandi per muovere il cursore
+(il cursore è visualizzato come un triangolo o una tartaruga)
+
+base, altezza - dimensioni canvas
+(0, 0) - bottom left position
+(base/2, altezza/2) - home position
+
+
+Il cursore è caratterizzato dai seguenti attributi:
+-Posizione
+-Direzione (angolo verso cui è puntato il cursore, rappresentato con un intero nell'intervallo [0, 360] dove lo 0 indica la direzione orizzontale verso destra)
+-Colore Linea (colore della linea prodotta dal cursore)
+-Colore Area (colore di un'area chiusa delimitata da segmenti)
+-Plot (parametro booleano che indica se il cursore sta generando o meno un tracciato durante il suo spostamento)
+-Grandezza del tratto prodotto
+
+Sono presenti anche i seguenti attributi:
+-Colore canvas (background)
+
+i comandi da implementare:
+FORWARD <dist>
+BACKWARD <dist>
+LEFT <angle>
+RIGHT <angle>
+CLEARSCREEN
+HOME
+PENUP
+PENDOWN
+SETPENCOLOR <byte> <byte> <byte>
+SETFILLCOLOR <byte> <byte> <byte>
+SETSCREENCOLOR <byte> <byte> <byte>
+SETPENSIZE <size>
+REPEAT <num> [ <cmds> ]
+
+colore RGB è rappresentato da tre byte (R, G, B)
+
+SALVARE UN DISEGNO generato da un programma Logo produce un file con la seguente struttura:
+//base e altezza canvas, colore background
+SIZE <num> <num> <b1> <b2> <b3>
+//elementi disegnati
+<shape>					
+...
+<shape>
+LINE <x1> <y1> <x2> <y2> <b1> <b2> <b3> <size>
+
+esempio:
+POLYGON <N> <b1> <b2> <b3>
+<x1> <y1> <x2> <y2> <b1> <b2> <b3> <size>
+<x1> <y1> <x2> <y2> <b1> <b2> <b3> <size>
+... (N linee)
+(poligono costruito da N linee, colorato con colore b1, b2, b3)
+
+
