@@ -12,7 +12,7 @@ MODEL:
 -Cursore
 
 VIEW:
--GUI (JavaFX)
+-GUI (JavaFX) -> canvas, disegnare linee
 -Text input per comandi
 
 CONTROLLER:
