@@ -1,4 +1,4 @@
-L'utente impartisce comandi per muovere il cursore
+    L'utente impartisce comandi per muovere il cursore
 (il cursore è visualizzato come un triangolo o una tartaruga)
 
 base, altezza - dimensioni canvas

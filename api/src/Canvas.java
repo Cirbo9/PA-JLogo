@@ -21,6 +21,11 @@ public interface Canvas {
     Color getColor();
 
     /**
+     * resets to a clear canvas with default settings
+     */
+    void clear();
+
+    /**
      *
      * @return the canvas info in a format which is ready to be saved in memory
      */

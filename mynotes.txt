@@ -17,3 +17,17 @@ VIEW:
 
 CONTROLLER:
 -Interprete dei comandi
+
+INTERPRETE
+SCALETTA
+// ha senso scrivere programma cli se poi uso javafx?
+0) utente avvia il programma
+Per aprire canvas da memoria: utente mette il path del file negli argomenti del comando jlogo
+(esempio: jlogo miocanvas.jlogo)
+1) utente seleziona risoluzione del canvas
+1.5) canvas creato e mostrato
+2) utente disegna quello che cazzo vuole
+3) utente salva quello che ha fatto
+4) canvas viene tradotto in formato testuale
+5) canvas viene salvato su file
+6) il programma termina

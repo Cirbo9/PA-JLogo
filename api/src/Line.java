@@ -11,5 +11,5 @@ public abstract class Line extends AbstractColoredElement {
         this.end = end;
         this.thickness = thickness;
     }
-    //TODO getColor?
+
 }

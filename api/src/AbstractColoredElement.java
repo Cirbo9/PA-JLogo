@@ -14,4 +14,9 @@ public abstract class AbstractColoredElement implements ColoredElement {
     public Color getColor() {
         return color;
     }
+
+    @Override
+    public void setColor(Color newColor) {
+        this.color = newColor;
+    }
 }
