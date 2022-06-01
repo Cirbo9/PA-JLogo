@@ -10,6 +10,7 @@ STRUTTURA PROGETTO
 MODEL:
 -Canvas
 -Cursore
+(Linea, Area)
 
 VIEW:
 -GUI (JavaFX) -> canvas, disegnare linee
@@ -31,3 +32,20 @@ Per aprire canvas da memoria: utente mette il path del file negli argomenti del 
 4) canvas viene tradotto in formato testuale
 5) canvas viene salvato su file
 6) il programma termina
+
+
+MAIN
+la classe Main
+APP e INTERPRETER
+APP prende user input, INTERPRETER lo interpreta. voglio unire queste due cose
+nuova APP:
+ha le due responsabilità di prendere input dallo user e anche di interpretarlo.
+CONTROLLER:
+contiene le implementazioni dei metodi che fanno disegnare roba sul canvas.
+
+Main -> App/Interpreter -> Controller
+Controller potrà essere esteso con nuovi comandi se uno vuole.
+I metodi dentro alle varie classi canvas, line etc dovranno probabilmente essere atomici
+per favorire una maggiore modularizzazione, in modo che un utente possa usare i metodi delle classi
+per creare nuove features, senza andare a toccare le opzioni più a basso livello relative
+al canvas e al disegno in generale
