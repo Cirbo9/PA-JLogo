@@ -1,3 +1,5 @@
+package PA.JLogo.app;
+
 import java.util.Scanner;
 
 public class App {
@@ -5,11 +7,11 @@ public class App {
     private final Scanner keyboard;
 
 
-    public App(String[] args) {
+    public App() {
         this.keyboard = new Scanner(System.in);
     }
 
-    public void start() throws Exception {
+    public void start() {
         String command = getNextUserInput();
         Interpreter.interpret(command);
 

@@ -1,4 +1,4 @@
--Il progetto dovrà essere ESTENDIBILE, ovvero dovrà
+-Il progetto dovrà essere ESTENDIBILE (principio Open-closed) ovvero dovrà
 prevedere l'aggiunta di nuovi comandi e nuove funzionalità in modo
 facile e veloce (senza modificare il codice esistente)
 -Il pattern MVC è applicato e con esso il vantaggio della
@@ -21,7 +21,6 @@ CONTROLLER:
 
 INTERPRETE
 SCALETTA
-// ha senso scrivere programma cli se poi uso javafx?
 0) utente avvia il programma
 Per aprire canvas da memoria: utente mette il path del file negli argomenti del comando jlogo
 (esempio: jlogo miocanvas.jlogo)
@@ -33,6 +32,14 @@ Per aprire canvas da memoria: utente mette il path del file negli argomenti del 
 5) canvas viene salvato su file
 6) il programma termina
 
+SCALETTA CREAZIONE DI UN ELEMENTO A VIDEO
+utente vuole disegnare una linea
+2) utente scrive il comando per disegnare una linea
+ad esempio "forward 60"
+il programma ha due cose da fare
+3) programma visualizza la linea sul canvas
+4) programma genera istruzioni che compariranno sul file salvato
+quindi dopo ogni elemento creato, il programma riporta le modifiche sul file
 
 MAIN
 la classe Main

@@ -1,4 +1,6 @@
-import java.awt.*;
+package PA.JLogo.app.model;
+
+import java.awt.Color;
 
 public abstract class Line extends AbstractColoredElement {
     Coordinate start;

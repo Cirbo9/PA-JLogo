@@ -1,3 +1,5 @@
+package PA.JLogo.app.model;
+
 public interface Coordinate<X, Y> {
     /**
      *

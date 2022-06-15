@@ -5,11 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="948d0c7b-d069-4923-96d0-1fde3ad17c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Interpreter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/AbstractColoredElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/ColoredElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Coordinate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/JLogoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/AbstractColoredElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Canvas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/ColoredElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Coordinate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Interpreter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Line.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PioliMichele110388/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/PioliMichele110388/AppTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mynotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mynotes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +69,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="296s1X2ofaMDfiYraBGMGVtZWhs" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,23 +80,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -110,6 +134,12 @@
       <workItem from="1653053716952" duration="4144000" />
       <workItem from="1653921767487" duration="157000" />
       <workItem from="1654004874156" duration="93000" />
+      <workItem from="1654204671487" duration="1055000" />
+      <workItem from="1654205760733" duration="276000" />
+      <workItem from="1654206098180" duration="843000" />
+      <workItem from="1655285475057" duration="265000" />
+      <workItem from="1655285959860" duration="599000" />
+      <workItem from="1655286721362" duration="1537000" />
     </task>
     <servers />
   </component>

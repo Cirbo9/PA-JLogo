@@ -1,3 +1,5 @@
+package PA.JLogo.app.model;
+
 import java.awt.*;
 
 public interface ColoredElement {

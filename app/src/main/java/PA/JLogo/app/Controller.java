@@ -1,3 +1,6 @@
+package PA.JLogo.app;
+import PA.JLogo.app.model.*;
+
 public class Controller {
     /**
      * Creates all the variables that are necessary for the system to function
