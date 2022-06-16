@@ -18,6 +18,7 @@ public class Interpreter {
 
     /**
      * Chooses the operation to do
+     *
      * @param command The command that the user typed
      * @throws Exception if the command specified by the user is not found
      */
@@ -31,6 +32,7 @@ public class Interpreter {
             case "right":
             case "clearscreen":
             case "home":
+            case "help":
             case "penup":
             case "pendown":
             case "setpencolor":

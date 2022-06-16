@@ -1,6 +1,4 @@
-package PA.JLogo.app.model;
-
-import PA.JLogo.app.App;
+package PA.JLogo.app;
 
 public class Main {
     public static void main(String[] args) {

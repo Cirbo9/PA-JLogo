@@ -8,6 +8,12 @@ public class Controller {
      */
 
     private Canvas canvas;
+    private SimpleCursor cursor;
+
+    public Controller(Canvas canvas, SimpleCursor cursor) {
+        this.canvas = canvas;
+        this.cursor = cursor;
+    }
 
 
     public static void forward () {

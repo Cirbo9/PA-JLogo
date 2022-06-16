@@ -12,14 +12,20 @@ public class App {
     }
 
     public void start() {
-        String command = getNextUserInput();
-        Interpreter.interpret(command);
-
-        return;
+        init();
+        while (true) {
+            String command = getNextUserInput();
+            Interpreter.interpret(command);
+        }
     }
 
     private String getNextUserInput() {
         System.out.print("JLOGO # ");
         return keyboard.nextLine();
     }
+
+    public void init() {
+
+    }
+
 }

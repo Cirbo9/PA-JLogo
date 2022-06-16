@@ -2,7 +2,7 @@ package PA.JLogo.app.model;
 
 import java.awt.*;
 
-public interface ColoredElement {
+public interface ColoredObject {
     /**
      *
      * @return the color of the element
