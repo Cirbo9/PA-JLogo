@@ -1,10 +1,12 @@
 package PA.JLogo.app.model;
 
+import PA.JLogo.app.util.Coordinate;
 import PA.JLogo.app.util.CursorState;
+import PA.JLogo.app.util.RotationDirection;
 
 import java.awt.*;
 
-public class SimpleCursor {
+public class SimpleCursor<T extends Number> implements Cursor<T> {
     private CursorState state;
     private Color color;
     private Color areaColor;
@@ -17,11 +19,14 @@ public class SimpleCursor {
         this.direction = direction;
     }
 
+
+
     public CursorState getState() {
         return state;
     }
 
-    public void setState(CursorState state) {
+    @Override
+    public void setCursorState(CursorState state) {
         this.state = state;
     }
 
@@ -53,7 +58,13 @@ public class SimpleCursor {
         return direction;
     }
 
-    public void setDirection(int direction) {
-        this.direction = direction;
+    /**
+     * Rotates the cursor into either left or right
+     * @param direction left or right
+     * @param rotation how much the cursor has to rotate
+     */
+    @Override
+    public void rotate(RotationDirection direction, int rotation) {
+        //TODO implement and change direction/rotation name
     }
 }

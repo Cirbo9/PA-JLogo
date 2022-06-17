@@ -2,7 +2,7 @@ package PA.JLogo.app.model;
 
 import java.awt.*;
 
-public abstract class AbstractColoredElement implements ColoredObject {
+public abstract class AbstractColoredElement {
     /**
      * The color of the element
      */
@@ -12,13 +12,11 @@ public abstract class AbstractColoredElement implements ColoredObject {
         this.color = color;
     }
 
-    @Override
     public Color getColor() {
         return color;
     }
 
-    @Override
-    public void setColor(Color newColor) {
-        this.color = newColor;
+    public void setColor(Color color) {
+        this.color = color;
     }
 }

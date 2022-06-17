@@ -16,12 +16,10 @@ public class SimpleLine<T extends Number> extends AbstractColoredElement impleme
         this.thickness = thickness;
     }
 
-    @Override
     public Coordinate<T> getStartCoordinate() {
         return start;
     }
 
-    @Override
     public Coordinate<T> getEndCoordinate() {
         return end;
     }

@@ -3,14 +3,14 @@ package PA.JLogo.app.model;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class AbstractCanvas implements Canvas {
+public class SimpleCanvas implements Canvas {
 
     private ArrayList<AbstractColoredElement> elements;
     private final int base;
     private final int height;
     private Color color;
 
-    public AbstractCanvas(ArrayList<AbstractColoredElement> elements, Color color, int base, int height) {
+    public SimpleCanvas(ArrayList<AbstractColoredElement> elements, Color color, int base, int height) {
         this.elements = elements;
         this.base = base;
         this.height = height;
@@ -20,7 +20,6 @@ public class AbstractCanvas implements Canvas {
     /**
      * @return the base of the canvas
      */
-    @Override
     public int getBase() {
         return this.base;
     }
@@ -28,7 +27,6 @@ public class AbstractCanvas implements Canvas {
     /**
      * @return the height of the canvas
      */
-    @Override
     public int getHeight() {
         return this.height;
     }
@@ -36,7 +34,6 @@ public class AbstractCanvas implements Canvas {
     /**
      * @return the background color of the canvas
      */
-    @Override
     public Color getColor() {
         return this.color;
     }
