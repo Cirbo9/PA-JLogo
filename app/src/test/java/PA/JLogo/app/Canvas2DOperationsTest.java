@@ -1,13 +1,17 @@
 package PA.JLogo.app;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class Canvas2DOperationsTest {
 
+
+
     @Test
-    void forwardTranslation() {
+    public void testForwardTranslation() {
+
     }
 
     @Test
-    void backwardTranslation() {
+    public void testBackwardTranslation() {
     }
 }

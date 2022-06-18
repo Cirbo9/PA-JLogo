@@ -1,27 +1,27 @@
 package PA.JLogo.app.util;
 
-public class Coordinate2D<T extends Number> implements Coordinate<T> {
-    private T x;
-    private T y;
+public class Coordinate2D implements Coordinate {
+    private double x;
+    private double y;
 
-    public Coordinate2D(T x, T y) {
+    public Coordinate2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public T getX() {
+    public double getX() {
         return this.x;
     }
 
-    public T getY() {
+    public double getY() {
         return this.y;
     }
 
-    public void setX(T x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public void setY(T y) {
+    public void setY(double y) {
         this.y = y;
     }
 }

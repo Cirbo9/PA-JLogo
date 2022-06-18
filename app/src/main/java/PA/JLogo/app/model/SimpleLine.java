@@ -1,26 +1,27 @@
 package PA.JLogo.app.model;
 
 import PA.JLogo.app.util.Coordinate;
+import PA.JLogo.app.util.Coordinate2D;
 
 import java.awt.Color;
 
-public class SimpleLine<T extends Number> extends AbstractColoredElement implements Line<T> {
-    final Coordinate<T> start;
-    final Coordinate<T> end;
+public class SimpleLine extends AbstractColoredElement implements Line {
+    final Coordinate2D start;
+    final Coordinate2D end;
     int thickness;
 
-    public SimpleLine(Coordinate<T> start, Coordinate<T> end, Color color, int thickness) {
+    public SimpleLine(Coordinate2D start, Coordinate2D end, Color color, int thickness) {
         super(color);
         this.start = start;
         this.end = end;
         this.thickness = thickness;
     }
 
-    public Coordinate<T> getStartCoordinate() {
+    public Coordinate2D getStartCoordinate() {
         return start;
     }
 
-    public Coordinate<T> getEndCoordinate() {
+    public Coordinate2D getEndCoordinate() {
         return end;
     }
 

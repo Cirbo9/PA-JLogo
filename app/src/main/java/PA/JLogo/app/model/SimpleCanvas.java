@@ -1,5 +1,7 @@
 package PA.JLogo.app.model;
 
+import PA.JLogo.app.util.Coordinate2D;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -20,6 +22,7 @@ public class SimpleCanvas implements Canvas {
     /**
      * @return the base of the canvas
      */
+    @Override
     public int getBase() {
         return this.base;
     }
@@ -27,6 +30,7 @@ public class SimpleCanvas implements Canvas {
     /**
      * @return the height of the canvas
      */
+    @Override
     public int getHeight() {
         return this.height;
     }

@@ -1,12 +1,11 @@
 package PA.JLogo.app.model;
 
-import PA.JLogo.app.util.Coordinate;
 import PA.JLogo.app.util.CursorState;
 import PA.JLogo.app.util.RotationDirection;
 
 import java.awt.*;
 
-public class SimpleCursor<T extends Number> implements Cursor<T> {
+public class SimpleCursor implements Cursor {
     private CursorState state;
     private Color color;
     private Color areaColor;
