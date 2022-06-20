@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="948d0c7b-d069-4923-96d0-1fde3ad17c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/SimpleCanvasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Validations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Interpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Canvas2DOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Canvas2DOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/Canvas2DOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/Canvas2DOperationsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/Canvas2DOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/Canvas2DOperationsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/SimpleCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mynotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mynotes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +55,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,7 +92,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mikyp/java/lib/opentest4j-1.2.0.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mikyp/myWorkspace/PA-JLogo/app/src/main/java/PA/JLogo/app/test&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -97,10 +101,14 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mikyp\myWorkspace\PA-JLogo\app\src\main\java\PA\JLogo\app\test" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -113,114 +121,92 @@
       <recent name="PA.JLogo.app.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SimpleCanvasTest.testGetHomePosition (1)">
-    <configuration name="Canvas2DOperationsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;PA.JLogo.app.Canvas2DOperationsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.Canvas2DOperationsTest">
+    <configuration name="Canvas2DOperationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.app.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.Canvas2DOperationsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="SimpleCanvasTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;java.PA.JLogo.app.SimpleCanvasTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="Canvas2DOperationsTest.testBackwardTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.app.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.Canvas2DOperationsTest" />
+      <option name="METHOD_NAME" value="testBackwardTranslation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="SimpleCanvasTest (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;PA.JLogo.app.SimpleCanvasTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="Canvas2DOperationsTest.testForwardTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.app.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.Canvas2DOperationsTest" />
+      <option name="METHOD_NAME" value="testForwardTranslation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="SimpleCanvasTest.testGetHomePosition (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;PA.JLogo.app.SimpleCanvasTest.testGetHomePosition&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="SimpleCanvasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.app.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.SimpleCanvasTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="All in PioliMichele110388" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PioliMichele110388" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="SimpleCanvasTest.testGetHomePosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.app.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.SimpleCanvasTest" />
+      <option name="METHOD_NAME" value="testGetHomePosition" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SimpleCanvasTest.testGetHomePosition (1)" />
-        <item itemvalue="Gradle.SimpleCanvasTest (2)" />
-        <item itemvalue="Gradle.SimpleCanvasTest (1)" />
-        <item itemvalue="JUnit.All in PioliMichele110388" />
-        <item itemvalue="Gradle.Canvas2DOperationsTest" />
+        <item itemvalue="JUnit.Canvas2DOperationsTest" />
+        <item itemvalue="JUnit.Canvas2DOperationsTest.testBackwardTranslation" />
+        <item itemvalue="JUnit.Canvas2DOperationsTest.testForwardTranslation" />
+        <item itemvalue="JUnit.SimpleCanvasTest" />
+        <item itemvalue="JUnit.SimpleCanvasTest.testGetHomePosition" />
       </list>
     </recent_temporary>
   </component>
@@ -267,6 +253,12 @@
       <workItem from="1655477858667" duration="829000" />
       <workItem from="1655478796727" duration="1861000" />
       <workItem from="1655542305591" duration="35000" />
+      <workItem from="1655715799516" duration="365000" />
+      <workItem from="1655716229175" duration="978000" />
+      <workItem from="1655718933013" duration="603000" />
+      <workItem from="1655719572475" duration="17000" />
+      <workItem from="1655732319252" duration="7056000" />
+      <workItem from="1655752417015" duration="10026000" />
     </task>
     <servers />
   </component>
@@ -286,5 +278,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

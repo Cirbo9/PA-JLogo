@@ -1,8 +1,12 @@
 package PA.JLogo.app.util;
 
+import java.text.DecimalFormat;
+
 public class Coordinate2D implements Coordinate {
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
+
+    private static final DecimalFormat df = new DecimalFormat("0");
 
     public Coordinate2D(double x, double y) {
         this.x = x;
@@ -17,11 +21,8 @@ public class Coordinate2D implements Coordinate {
         return this.y;
     }
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
+    @Override
+    public String toString() {
+        return "(" + df.format(this.x) + ", " + df.format(this.y) + ")";
     }
 }

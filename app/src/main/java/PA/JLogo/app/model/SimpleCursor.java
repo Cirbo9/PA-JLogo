@@ -25,7 +25,7 @@ public class SimpleCursor implements Cursor {
     }
 
     @Override
-    public void setCursorState(CursorState state) {
+    public void setState(CursorState state) {
         this.state = state;
     }
 

@@ -1,7 +1,5 @@
 package PA.JLogo.app.model;
 
-import PA.JLogo.app.util.Coordinate2D;
-
 import java.awt.*;
 import java.util.ArrayList;
 

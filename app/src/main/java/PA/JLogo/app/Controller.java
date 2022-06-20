@@ -1,5 +1,7 @@
 package PA.JLogo.app;
-import PA.JLogo.app.model.*;
+
+import PA.JLogo.app.model.Canvas;
+import PA.JLogo.app.model.SimpleCursor;
 
 public class Controller {
     /**

@@ -1,9 +1,8 @@
 package PA.JLogo.app.model;
 
-import PA.JLogo.app.util.Coordinate;
 import PA.JLogo.app.util.Coordinate2D;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class SimpleLine extends AbstractColoredElement implements Line {
     final Coordinate2D start;

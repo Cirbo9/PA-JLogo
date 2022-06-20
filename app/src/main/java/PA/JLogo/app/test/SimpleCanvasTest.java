@@ -1,9 +1,8 @@
-package PA.JLogo.app;
+package PA.JLogo.app.test;
 
 import PA.JLogo.app.model.SimpleCanvas;
 import PA.JLogo.app.util.Coordinate2D;
 import org.junit.jupiter.api.Test;
-
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -17,7 +16,10 @@ public class SimpleCanvasTest {
 
     @Test
     public void testGetHomePosition() {
-        Coordinate2D c = new Coordinate2D(1920/2.0, 1080/2.0);
-        assertEquals(c, s.getHomePosition());
+        Coordinate2D c = new Coordinate2D(1920/2, 1080/2);
+        assertEquals(c.getX(), s.getHomePosition().getX());
+        assertEquals(c.getY(), s.getHomePosition().getY());
     }
+
+
 }

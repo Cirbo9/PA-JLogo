@@ -31,7 +31,7 @@ public interface Canvas {
      * @return the Home position of the canvas
      */
     default Coordinate2D getHomePosition() {
-        return new Coordinate2D(this.getBase() / 2.0, this.getHeight() / 2.0);
+        return new Coordinate2D(this.getBase() / 2, this.getHeight() / 2);
     }
 
 }

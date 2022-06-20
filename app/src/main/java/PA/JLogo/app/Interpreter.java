@@ -14,6 +14,7 @@ public class Interpreter {
     public static void interpret (String userInput) {
         StringTokenizer tokenizer = new StringTokenizer(userInput, " ");
         parseCommand(tokenizer.nextToken().toLowerCase(Locale.ROOT));
+        //TODO FIX THIS SHIT the rest of the String simply goes lost lmao, i need it to get the other parameters besides the fucking command
     }
 
     /**

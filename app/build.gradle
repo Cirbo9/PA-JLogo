@@ -16,14 +16,6 @@ test {
     useJUnitPlatform()
 }
 
-//sourceSets {
-//    test {
-//        java {
-//            srcDirs = ['src/test']
-//        }
-//    }
-//}
-
 javafx {
     version = "14"
     modules = [ 'javafx.controls' ]
@@ -38,7 +30,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
-
 application {
     // Define the main class for the application.
     mainClass = 'PioliMichele110388.App'

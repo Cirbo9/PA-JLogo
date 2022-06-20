@@ -56,3 +56,17 @@ I metodi dentro alle varie classi canvas, line etc dovranno probabilmente essere
 per favorire una maggiore modularizzazione, in modo che un utente possa usare i metodi delle classi
 per creare nuove features, senza andare a toccare le opzioni più a basso livello relative
 al canvas e al disegno in generale
+
+NOTA
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+i test e la build sono eseguiti da INTELLIJ (che credo usi comunque gradle) invece di Gradle
+come da settaggi di default, per il semplice motivo che gradle non era in grado di eseguire il
+build delle mie classi di test
+
+NOTA
+ho deciso che le coordinate fanno implementate come float (o double)
+le ragioni:
+-approssimazione in caso di linee brevi e con inclinazioni "scomode" può essere troppo.. uh.. approssimativa
+-devono essere possibili linee lunghe una frazione di un pixel (saranno possibili disegni più dettagliati)
+sarà possibile implementare "frazioni di un pixel" su javafx? non lo so
