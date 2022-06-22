@@ -1,32 +1,61 @@
 package PA.JLogo.app.model;
 
+import PA.JLogo.app.util.Coordinate2D;
 import PA.JLogo.app.util.CursorState;
-import PA.JLogo.app.util.RotationDirection;
 
 import java.awt.*;
+import java.util.function.Function;
+
+import static PA.JLogo.app.util.CursorState.*;
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
 
 public class SimpleCursor implements Cursor {
     private CursorState state;
     private Color color;
     private Color areaColor;
     private int direction;
+    private int thickness;
+    private Coordinate2D currentPosition;
 
-    public SimpleCursor(CursorState state, Color color, Color areaColor, int direction) {
+    private Function<Integer, Coordinate2D> translation = (px) -> {
+        if (px == 0)
+            return this.currentPosition;
+        return new Coordinate2D(this.currentPosition.getX() + (px * cos(Math.toRadians(this.direction))),
+                this.currentPosition.getY() + (px * sin(Math.toRadians(this.direction))));
+    };
+
+    public SimpleCursor(CursorState state, Color color, Color areaColor, int direction, int thickness, Coordinate2D position) {
         this.state = state;
         this.color = color;
         this.areaColor = areaColor;
         this.direction = direction;
-    }
-
-
-
-    public CursorState getState() {
-        return state;
+        this.currentPosition = position;
+        this.thickness = thickness;
     }
 
     @Override
-    public void setState(CursorState state) {
-        this.state = state;
+    public CursorState getState() {
+        return this.state;
+    }
+
+    @Override
+    public void up() {
+        this.state = UP;
+    }
+
+    @Override
+    public void down() {
+        this.state = DOWN;
+    }
+
+    public Coordinate2D getPosition() {
+        return this.currentPosition;
+    }
+
+    @Override
+    public void setPosition(Coordinate2D c){
+        this.currentPosition = c;
     }
 
     public Color getColor() {
@@ -38,7 +67,6 @@ public class SimpleCursor implements Cursor {
     }
 
     /**
-     *
      * @return the current color used to fill an enclosed area when it is created.
      */
     public Color getAreaColor() {
@@ -47,6 +75,7 @@ public class SimpleCursor implements Cursor {
 
     /**
      * Sets the color which will be used to fill an enclosed area next time it will be created.
+     *
      * @param newAreaColor the color to be set
      */
     public void setAreaColor(Color newAreaColor) {
@@ -58,12 +87,40 @@ public class SimpleCursor implements Cursor {
     }
 
     /**
-     * Rotates the cursor into either left or right
-     * @param direction left or right
+     * Rotates the cursor clockwise by [rotation] degrees
+     *
      * @param rotation how much the cursor has to rotate
      */
     @Override
-    public void rotate(RotationDirection direction, int rotation) {
-        //TODO implement and change direction/rotation name
+    public void rotateLeft(int rotation) {
+        this.direction = (this.direction + rotation) % 360;
+    }
+
+    @Override
+    public void rotateRight(int rotation) {
+        int r = rotation % 360;
+        if (r > this.direction)
+            this.direction += 360;
+        this.direction -= r;
+    }
+
+    /**
+     * @param px how much the cursor has to move forward
+     */
+    @Override
+    public void forward(int px) {
+        this.currentPosition = translation.apply(px);
+    }
+
+    /**
+     * @param px how much the cursor has to move backward
+     */
+    @Override
+    public void backward(int px) {
+        forward(-px);
+    }
+
+    public Line drawLine(int px) {
+        return new SimpleLine(this.currentPosition, translation.apply(px), this.color, this.thickness);
     }
 }

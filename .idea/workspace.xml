@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="948d0c7b-d069-4923-96d0-1fde3ad17c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Validations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Interpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Canvas2DOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Canvas2DOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/Canvas2DOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/Canvas2DOperationsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/app/SimpleCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/RotationDirection.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mynotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mynotes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,6 +249,13 @@
       <workItem from="1655719572475" duration="17000" />
       <workItem from="1655732319252" duration="7056000" />
       <workItem from="1655752417015" duration="10026000" />
+      <workItem from="1655796850065" duration="7578000" />
+      <workItem from="1655823638821" duration="1100000" />
+      <workItem from="1655882531955" duration="398000" />
+      <workItem from="1655886747095" duration="2284000" />
+      <workItem from="1655894209223" duration="278000" />
+      <workItem from="1655901069032" duration="5964000" />
+      <workItem from="1655929173255" duration="4017000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,12 @@
 package PA.JLogo.app;
 
+import PA.JLogo.app.model.SimpleCanvas;
+import PA.JLogo.app.model.SimpleCursor;
+import PA.JLogo.app.util.Coordinate2D;
+import PA.JLogo.app.util.CursorState;
+
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -12,20 +19,21 @@ public class App {
     }
 
     public void start() {
-        init();
+        Controller controller = new Controller(new SimpleCanvas(new ArrayList<>(), Color.red,
+                getInt(), getInt()),
+                new SimpleCursor(CursorState.DOWN, Color.red, Color.red, 0, 5, new Coordinate2D(0.0, 0.0)));
         while (true) {
             String command = getNextUserInput();
-            Interpreter.interpret(command);
+            Controller.interpret(command);
         }
+    }
+
+    private int getInt() {
+        return keyboard.nextInt();
     }
 
     private String getNextUserInput() {
         System.out.print("JLOGO # ");
         return keyboard.nextLine();
     }
-
-    public void init() {
-
-    }
-
 }

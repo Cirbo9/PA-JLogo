@@ -21,9 +21,7 @@ public interface Canvas {
      * @param e the element to be added
      */
     void add(AbstractColoredElement e);
-
     int getBase();
-
     int getHeight();
 
     /**

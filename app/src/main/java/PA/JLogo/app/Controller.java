@@ -1,7 +1,11 @@
 package PA.JLogo.app;
 
 import PA.JLogo.app.model.Canvas;
-import PA.JLogo.app.model.SimpleCursor;
+import PA.JLogo.app.model.Cursor;
+
+import java.awt.*;
+import java.util.Locale;
+import java.util.StringTokenizer;
 
 public class Controller {
     /**
@@ -10,63 +14,129 @@ public class Controller {
      */
 
     private Canvas canvas;
-    private SimpleCursor cursor;
+    private Cursor cursor;
+    private static StringTokenizer tokenizer;
 
-    public Controller(Canvas canvas, SimpleCursor cursor) {
+    public Controller(Canvas canvas, Cursor cursor) {
         this.canvas = canvas;
         this.cursor = cursor;
     }
 
-
-    public static void forward () {
-
-    }
-
-    public static void backward () {
+    /**
+     * This is the procedure to initializing the canvas (setting base and height)
+     */
+    public void init() {
 
     }
 
-    public static void left () {
+    /**
+     * Parses the command that the user typed
+     * @param userInput The line typed by the user
+     */
+    public void interpret (String userInput) {
+        tokenizer = new StringTokenizer(userInput, " ");
+        String command = tokenizer.nextToken().toLowerCase(Locale.ROOT);
+        switch (command) {
+            case "quit":
+                return;
+            case "forward":
+            case "fd":
+                break;
+            case "backward":
+            case "bd":
+                break;
+            case "left":
+                break;
+            case "right":
+                break;
+            case "clearscreen":
+            case "clear":
+            case "cls":
+                this.clearscreen();
+                break;
+            case "home":
+                this.home();
+                break;
+            case "help":
+                break;
+            case "penup":
+            case "up":
+                this.cursor.up();
+                break;
+            case "pendown":
+            case "down":
+                this.cursor.down();
+                break;
+            case "setpencolor":
+                break;
+            case "setfillcolor":
+                break;
+            case "setscreencolor":
+                break;
+            case "setpensize":
+                break;
+            case "repeat":
+                break;
+            default: handleCommandNotFound(command);
+        }
+
 
     }
 
-    public static void right () {
+    private void handleCommandNotFound(String command) {
+        System.out.println(command + ": command not found.");
+    }
+
+
+    public void forward () {
 
     }
 
-    public static void clearscreen () {
+    public void backward () {
 
     }
 
-    public static void home () {
+    public void left () {
 
     }
 
-    public static void penup () {
+    public void right () {
 
     }
 
-    public static void pendown () {
+    public void clearscreen () {
+        this.canvas.clear();
+    }
+
+    public void home () {
+        cursor.setPosition(canvas.getHomePosition());
+    }
+
+    public void penup () {
+        cursor.up();
+    }
+
+    public void pendown () {
+        cursor.down();
+    }
+
+    public void setPenColor (Color color) {
 
     }
 
-    public static void setPenColor () {
+    public void setFillColor (Color color) {
 
     }
 
-    public static void setFillColor () {
+    public void setScreenColor (Color color) {
 
     }
 
-    public static void setScreenColor () {
+    public void setPenSize (int size) {
 
     }
 
-    public static void setPenSize () {
-
-    }
-
-    public static void repeat () {
+    public void repeat (int i) {
 
     }
 
