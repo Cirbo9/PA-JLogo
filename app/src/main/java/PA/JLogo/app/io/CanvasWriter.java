@@ -1,5 +1,9 @@
 package PA.JLogo.app.io;
 
-public interface CanvasWriter {
+import PA.JLogo.app.model.Canvas;
 
+import java.io.File;
+
+public interface CanvasWriter {
+    File writeCanvas(Canvas canvas);
 }

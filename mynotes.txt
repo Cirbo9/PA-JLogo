@@ -61,7 +61,7 @@ le ragioni:
 -devono essere possibili linee lunghe una frazione di un pixel (saranno possibili disegni più dettagliati)
 sarà possibile implementare "frazioni di un pixel" su javafx? non lo so
 
-ALLORA
-classe App crea il controller! con il canvas vuoto! tanto il canvas non è final. Il controller poi creerà un altro
-canvas con la risoluzione giusta! e l'utente potrà anche decidere (durante esecuzione del programma)
-di buttare il canvas e crearne uno nuovo
+Predicate per capire se un gruppo di linee vanno a comporre una enclosed area
+devo fare una stream sull'array delle linee del canvas
+per fare in modo di prenderle e vedere quali punti coincidono
+todo: da vedere (a mano) quale deve essere l'algoritmo da usare per decidere se delle linee costituiscono una enclosed area

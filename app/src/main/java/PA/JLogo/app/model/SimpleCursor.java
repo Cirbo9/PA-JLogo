@@ -108,19 +108,15 @@ public class SimpleCursor implements Cursor {
      * @param px how much the cursor has to move forward
      */
     @Override
-    public void forward(int px) {
-        this.currentPosition = translation.apply(px);
+    public Line forward(int px) {
+        return new SimpleLine(this.currentPosition, translation.apply(px), this.color, this.thickness);
     }
 
     /**
      * @param px how much the cursor has to move backward
      */
     @Override
-    public void backward(int px) {
-        forward(-px);
-    }
-
-    public Line drawLine(int px) {
-        return new SimpleLine(this.currentPosition, translation.apply(px), this.color, this.thickness);
+    public Line backward(int px) {
+        return new SimpleLine(this.currentPosition, translation.apply(-px), this.color, this.thickness);
     }
 }

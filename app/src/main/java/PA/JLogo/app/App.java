@@ -11,29 +11,25 @@ import java.util.Scanner;
 
 public class App {
 
-    private final Scanner keyboard;
-
+    public final Scanner keyboard;
 
     public App() {
         this.keyboard = new Scanner(System.in);
     }
 
     public void start() {
-        Controller controller = new Controller(new SimpleCanvas(new ArrayList<>(), Color.red,
-                getInt(), getInt()),
-                new SimpleCursor(CursorState.DOWN, Color.red, Color.red, 0, 5, new Coordinate2D(0.0, 0.0)));
-        while (true) {
-            String command = getNextUserInput();
-            Controller.interpret(command);
-        }
-    }
-
-    private int getInt() {
-        return keyboard.nextInt();
-    }
-
-    private String getNextUserInput() {
-        System.out.print("JLOGO # ");
-        return keyboard.nextLine();
+        CLIView view = new CLIView();
+        Controller controller = new Controller(new SimpleCanvas(new ArrayList<>(), Color.red,1000,800),
+                new SimpleCursor(CursorState.DOWN, Color.red, Color.red, 0, 2, new Coordinate2D(0.0, 0.0)));
+        controller.init();
+        String s;
+        do {
+            s = view.getNextUserInput();
+            try {
+                controller.interpret(s);
+            } catch (IllegalArgumentException e) {
+                view.handleCommandNotFoundException(e);
+            }
+        } while (!s.equals("exit") && !s.equals("quit") && !s.equals("q"));
     }
 }

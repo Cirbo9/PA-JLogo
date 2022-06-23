@@ -2,20 +2,17 @@ package PA.JLogo.app;
 
 import PA.JLogo.app.model.Canvas;
 import PA.JLogo.app.model.Cursor;
+import PA.JLogo.app.model.Line;
 
 import java.awt.*;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
 public class Controller {
-    /**
-     * Creates all the variables that are necessary for the system to function
-     * Also contains all the supported operations
-     */
 
     private Canvas canvas;
     private Cursor cursor;
-    private static StringTokenizer tokenizer;
+    private StringTokenizer tokenizer;
 
     public Controller(Canvas canvas, Cursor cursor) {
         this.canvas = canvas;
@@ -26,28 +23,31 @@ public class Controller {
      * This is the procedure to initializing the canvas (setting base and height)
      */
     public void init() {
-
+        //set base, height
+        cursor.setPosition(canvas.getHomePosition());
     }
 
     /**
      * Parses the command that the user typed
      * @param userInput The line typed by the user
      */
-    public void interpret (String userInput) {
+    public void interpret (String userInput) throws IllegalArgumentException {
         tokenizer = new StringTokenizer(userInput, " ");
         String command = tokenizer.nextToken().toLowerCase(Locale.ROOT);
         switch (command) {
-            case "quit":
-                return;
             case "forward":
             case "fd":
+                forward();
                 break;
             case "backward":
             case "bd":
+                backward();
                 break;
             case "left":
+                left();
                 break;
             case "right":
+                right();
                 break;
             case "clearscreen":
             case "clear":
@@ -77,67 +77,71 @@ public class Controller {
                 break;
             case "repeat":
                 break;
-            default: handleCommandNotFound(command);
+            case "quit":
+            case "exit":
+            case "q":
+                return;
+            default: throw new IllegalArgumentException(command);
         }
 
 
     }
 
-    private void handleCommandNotFound(String command) {
-        System.out.println(command + ": command not found.");
+    private void forward () {
+        //get int px some way
+//        Line line = cursor.forward();
     }
 
-
-    public void forward () {
-
-    }
-
-    public void backward () {
+    private void backward () {
 
     }
 
-    public void left () {
+    private void left () {
 
     }
 
-    public void right () {
+    private void right () {
 
     }
 
-    public void clearscreen () {
+    private void clearscreen () {
         this.canvas.clear();
     }
 
-    public void home () {
+    private void home () {
         cursor.setPosition(canvas.getHomePosition());
     }
 
-    public void penup () {
+    private void penup () {
         cursor.up();
     }
 
-    public void pendown () {
+    private void pendown () {
         cursor.down();
     }
 
-    public void setPenColor (Color color) {
+    private void setPenColor (Color color) {
 
     }
 
-    public void setFillColor (Color color) {
+    private void setFillColor (Color color) {
 
     }
 
-    public void setScreenColor (Color color) {
+    private void setScreenColor (Color color) {
 
     }
 
-    public void setPenSize (int size) {
+    private void setPenSize (int size) {
 
     }
 
-    public void repeat (int i) {
+    private void repeat (int i) {
 
+    }
+
+    private void printHelp() {
+        System.out.println("JLogo lets you create a ");
     }
 
 }

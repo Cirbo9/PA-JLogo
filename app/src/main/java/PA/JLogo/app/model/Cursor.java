@@ -11,6 +11,6 @@ public interface Cursor {
     void setPosition(Coordinate2D c);
     void rotateLeft(int rotation);
     void rotateRight(int rotation);
-    void forward(int px);
-    void backward(int px);
+    Line forward(int px);
+    Line backward(int px);
 }

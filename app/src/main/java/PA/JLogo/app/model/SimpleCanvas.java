@@ -2,6 +2,7 @@ package PA.JLogo.app.model;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class SimpleCanvas implements Canvas {
 
@@ -9,6 +10,10 @@ public class SimpleCanvas implements Canvas {
     private final int base;
     private final int height;
     private Color color;
+
+    Predicate<Line> makesUpArea = (line) -> {
+        return false;
+    };
 
     public SimpleCanvas(ArrayList<AbstractColoredElement> elements, Color color, int base, int height) {
         this.elements = elements;
