@@ -2,7 +2,8 @@ package PA.JLogo.app.model;
 
 import PA.JLogo.app.util.Coordinate2D;
 
-import java.util.ArrayList;
+import java.awt.*;
+import java.util.List;
 
 public interface Canvas {
 
@@ -12,17 +13,13 @@ public interface Canvas {
     void clear();
 
     /**
-     * @return an ArrayList containing all elements drawn by the user
-     */
-    ArrayList<AbstractColoredElement> toArrayList();
-
-    /**
      * adds an element to the list of the user-made elements on the canvas
      * @param e the element to be added
      */
     void add(AbstractColoredElement e);
     int getBase();
     int getHeight();
+    Color getColor();
 
     /**
      *
@@ -31,5 +28,7 @@ public interface Canvas {
     default Coordinate2D getHomePosition() {
         return new Coordinate2D(this.getBase() / 2, this.getHeight() / 2);
     }
+
+    List<AbstractColoredElement> getElements();
 
 }

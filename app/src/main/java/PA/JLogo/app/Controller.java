@@ -23,8 +23,7 @@ public class Controller {
      * This is the procedure to initializing the canvas (setting base and height)
      */
     public void init() {
-        //set base, height
-        cursor.setPosition(canvas.getHomePosition());
+        //utente deve inserire misure del canvas
     }
 
     /**
@@ -88,8 +87,8 @@ public class Controller {
     }
 
     private void forward () {
-        //get int px some way
-//        Line line = cursor.forward();
+        int px = Integer.parseInt(tokenizer.nextToken());
+        Line line = cursor.forward(canvas, px);
     }
 
     private void backward () {
@@ -109,7 +108,7 @@ public class Controller {
     }
 
     private void home () {
-        cursor.setPosition(canvas.getHomePosition());
+        cursor.home();
     }
 
     private void penup () {

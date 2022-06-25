@@ -12,6 +12,10 @@ public class Area extends AbstractColoredElement {
         this.lines = lines;
     }
 
+    public int numberOfLines() {
+        return this.lines.size();
+    }
+
     public ArrayList<Line> getLines() {
         return lines;
     }

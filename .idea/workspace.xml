@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="948d0c7b-d069-4923-96d0-1fde3ad17c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/CLIView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/ColoredElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Formatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/SimpleFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Interpreter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/AbstractColoredElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/AbstractColoredElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/Canvas2DOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCursorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Canvas2DOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mynotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mynotes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,10 +53,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,7 +67,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="296s1X2ofaMDfiYraBGMGVtZWhs" />
   <component name="ProjectLevelVcsManager">
@@ -257,6 +265,10 @@
       <workItem from="1655929173255" duration="4017000" />
       <workItem from="1655969649214" duration="9001000" />
       <workItem from="1655987190647" duration="2830000" />
+      <workItem from="1656057299473" duration="5835000" />
+      <workItem from="1656074589509" duration="6624000" />
+      <workItem from="1656159530471" duration="8368000" />
+      <workItem from="1656172613378" duration="5309000" />
     </task>
     <servers />
   </component>

@@ -8,9 +8,9 @@ public interface Cursor {
     CursorState getState();
     void up();
     void down();
-    void setPosition(Coordinate2D c);
+    void home();
     void rotateLeft(int rotation);
     void rotateRight(int rotation);
-    Line forward(int px);
-    Line backward(int px);
+    Line forward(Canvas canvas, int px);
+    Line backward(Canvas canvas, int px);
 }

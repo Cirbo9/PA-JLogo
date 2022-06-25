@@ -18,11 +18,12 @@ public class SimpleCursor implements Cursor {
     private int thickness;
     private Coordinate2D currentPosition;
 
+
     private Function<Integer, Coordinate2D> translation = (px) -> {
         if (px == 0)
             return this.currentPosition;
-        return new Coordinate2D(this.currentPosition.getX() + (px * cos(Math.toRadians(this.direction))),
-                this.currentPosition.getY() + (px * sin(Math.toRadians(this.direction))));
+        return new Coordinate2D(this.currentPosition.x() + (px * cos(Math.toRadians(this.direction))),
+                this.currentPosition.y() + (px * sin(Math.toRadians(this.direction))));
     };
 
     public SimpleCursor(CursorState state, Color color, Color areaColor, int direction, int thickness, Coordinate2D position) {
@@ -54,8 +55,8 @@ public class SimpleCursor implements Cursor {
     }
 
     @Override
-    public void setPosition(Coordinate2D c){
-        this.currentPosition = c;
+    public void home(){
+        //Todo implement
     }
 
     public Color getColor() {
@@ -64,6 +65,10 @@ public class SimpleCursor implements Cursor {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void setThickness(int t) {
+        this.thickness = t;
     }
 
     /**
@@ -108,15 +113,15 @@ public class SimpleCursor implements Cursor {
      * @param px how much the cursor has to move forward
      */
     @Override
-    public Line forward(int px) {
-        return new SimpleLine(this.currentPosition, translation.apply(px), this.color, this.thickness);
+    public Line forward(Canvas canvas, int px) {
+        return new Line(this.currentPosition, translation.apply(px), this.color, this.thickness);
     }
 
     /**
      * @param px how much the cursor has to move backward
      */
     @Override
-    public Line backward(int px) {
-        return new SimpleLine(this.currentPosition, translation.apply(-px), this.color, this.thickness);
+    public Line backward(Canvas canvas, int px) {
+        return new Line(this.currentPosition, translation.apply(-px), this.color, this.thickness);
     }
 }

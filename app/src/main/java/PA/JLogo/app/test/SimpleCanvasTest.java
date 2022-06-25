@@ -17,9 +17,11 @@ public class SimpleCanvasTest {
     @Test
     public void testGetHomePosition() {
         Coordinate2D c = new Coordinate2D(1920/2, 1080/2);
-        assertEquals(c.getX(), s.getHomePosition().getX());
-        assertEquals(c.getY(), s.getHomePosition().getY());
+        assertEquals(c.x(), s.getHomePosition().x());
+        assertEquals(c.y(), s.getHomePosition().y());
     }
+
+
 
 
 }

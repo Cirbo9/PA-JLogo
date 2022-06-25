@@ -65,3 +65,17 @@ Predicate per capire se un gruppo di linee vanno a comporre una enclosed area
 devo fare una stream sull'array delle linee del canvas
 per fare in modo di prenderle e vedere quali punti coincidono
 todo: da vedere (a mano) quale deve essere l'algoritmo da usare per decidere se delle linee costituiscono una enclosed area
+line1.start = line2.start
+line2.end = line3.start
+line3.end = line1.start
+devo avere almeno tre equivalenze tra punti di start/end (non importa se start o end, fa lo stesso)
+per ogni lineX, compare lineX.start e lineX.end almeno una volta -> snake
+per ogni lineX, compare lineX.start e lineX.end almeno una volta, e poi per soltanto una lineY, compare lineY.start (almeno) due volte
+ oppure lineY.end (almeno) due volte -> poligono
+
+todo da vedere come implementare il controllo che la linea non deve uscire fuori dalle dimensioni del canvas
+
+per implementare in modo che la linea continui e riscappi sopra o de lato tipo pacman:
+canvas.base e 0.0 (due punti estremità su asse x) devono coincidere
+canvas.height e 0.0 (due punti estremità su asse y) devono coincidere
+creare una linea che va oltre e scappa da quel altra parte:

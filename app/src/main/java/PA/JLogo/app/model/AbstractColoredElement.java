@@ -2,7 +2,7 @@ package PA.JLogo.app.model;
 
 import java.awt.*;
 
-public abstract class AbstractColoredElement {
+public abstract class AbstractColoredElement implements ColoredElement {
     /**
      * The color of the element
      */
@@ -19,4 +19,13 @@ public abstract class AbstractColoredElement {
     public void setColor(Color color) {
         this.color = color;
     }
+
+    public boolean isFillable() {
+        return (this instanceof Area);
+    }
+
+    public boolean isLine() {
+        return (this instanceof Line);
+    }
+
 }
