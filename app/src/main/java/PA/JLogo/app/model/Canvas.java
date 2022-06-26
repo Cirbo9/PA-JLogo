@@ -1,8 +1,8 @@
 package PA.JLogo.app.model;
 
 import PA.JLogo.app.util.Coordinate2D;
+import java.awt.Color;
 
-import java.awt.*;
 import java.util.List;
 
 public interface Canvas {
@@ -19,7 +19,7 @@ public interface Canvas {
     void add(AbstractColoredElement e);
     int getBase();
     int getHeight();
-    Color getColor();
+    void setColor(Color bgColor);
 
     /**
      *

@@ -1,8 +1,8 @@
 package PA.JLogo.app.model;
 
 import PA.JLogo.app.util.Coordinate2D;
+import java.awt.Color;
 
-import java.awt.*;
 
 public class Line extends AbstractColoredElement {
     final Coordinate2D start;

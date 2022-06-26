@@ -3,8 +3,9 @@ package PA.JLogo.app;
 import PA.JLogo.app.model.Canvas;
 import PA.JLogo.app.model.Cursor;
 import PA.JLogo.app.model.Line;
+import PA.JLogo.app.util.CursorState;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
@@ -28,9 +29,10 @@ public class Controller {
 
     /**
      * Parses the command that the user typed
+     *
      * @param userInput The line typed by the user
      */
-    public void interpret (String userInput) throws IllegalArgumentException {
+    public void interpret(String userInput) throws IllegalArgumentException {
         tokenizer = new StringTokenizer(userInput, " ");
         String command = tokenizer.nextToken().toLowerCase(Locale.ROOT);
         switch (command) {
@@ -57,6 +59,7 @@ public class Controller {
                 this.home();
                 break;
             case "help":
+                printHelp();
                 break;
             case "penup":
             case "up":
@@ -67,80 +70,102 @@ public class Controller {
                 this.cursor.down();
                 break;
             case "setpencolor":
+                setPenColor();
                 break;
             case "setfillcolor":
+                setFillColor();
                 break;
             case "setscreencolor":
+                setScreenColor();
                 break;
             case "setpensize":
+                setPenSize();
                 break;
             case "repeat":
+                repeat();
                 break;
             case "quit":
             case "exit":
             case "q":
                 return;
-            default: throw new IllegalArgumentException(command);
+            default:
+                throw new IllegalArgumentException(command);
         }
 
 
     }
 
-    private void forward () {
+    private void forward() {
         int px = Integer.parseInt(tokenizer.nextToken());
+        penMovement(px);
+    }
+
+    private void backward() {
+        int px = Integer.parseInt(tokenizer.nextToken());
+        penMovement(-px);
+    }
+
+    private void penMovement(int px) {
         Line line = cursor.forward(canvas, px);
+        if (cursor.getState() == CursorState.DOWN)
+            canvas.add(line);
     }
 
-    private void backward () {
-
+    private void left() {
+        int px = Integer.parseInt(tokenizer.nextToken());
+        cursor.rotateLeft(px);
     }
 
-    private void left () {
-
+    private void right() {
+        int px = Integer.parseInt(tokenizer.nextToken());
+        cursor.rotateRight(px);
     }
 
-    private void right () {
-
-    }
-
-    private void clearscreen () {
+    private void clearscreen() {
         this.canvas.clear();
     }
 
-    private void home () {
-        cursor.home();
+    private void home() {
+        cursor.setPosition(canvas.getHomePosition());
     }
 
-    private void penup () {
+    private void penup() {
         cursor.up();
     }
 
-    private void pendown () {
+    private void pendown() {
         cursor.down();
     }
 
-    private void setPenColor (Color color) {
+    private void setPenColor() {
+        cursor.setPenColor(userPickColor());
+    }
+
+    private void setFillColor() {
+        cursor.setFillColor(userPickColor());
+    }
+
+    private void setScreenColor() {
+        canvas.setColor(userPickColor());
+    }
+
+    private Color userPickColor() {
+        int r = Integer.parseInt(tokenizer.nextToken());
+        int g = Integer.parseInt(tokenizer.nextToken());
+        int b = Integer.parseInt(tokenizer.nextToken());
+        return new Color(r, g, b);
+    }
+
+    private void setPenSize() {
 
     }
 
-    private void setFillColor (Color color) {
-
-    }
-
-    private void setScreenColor (Color color) {
-
-    }
-
-    private void setPenSize (int size) {
-
-    }
-
-    private void repeat (int i) {
+    private void repeat() {
 
     }
 
     private void printHelp() {
-        System.out.println("JLogo lets you create a ");
+        System.out.println("Welcome to JLogo");
     }
 
 }

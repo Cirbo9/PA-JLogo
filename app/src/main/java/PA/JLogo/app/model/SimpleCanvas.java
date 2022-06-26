@@ -1,9 +1,9 @@
 package PA.JLogo.app.model;
 
-import java.awt.*;
+import java.awt.Color;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class SimpleCanvas implements Canvas {
 
@@ -11,11 +11,6 @@ public class SimpleCanvas implements Canvas {
     private final int base;
     private final int height;
     private Color color;
-
-    //da non usare nel tostring
-    Predicate<AbstractColoredElement> makesUpArea = (line) -> {
-        return false;
-    };
 
     public SimpleCanvas(ArrayList<AbstractColoredElement> elements, Color color, int base, int height) {
         this.elements = elements;
@@ -40,9 +35,6 @@ public class SimpleCanvas implements Canvas {
         return this.height;
     }
 
-    /**
-     * @return
-     */
     @Override
     public List<AbstractColoredElement> getElements() {
         return this.elements;
@@ -51,7 +43,6 @@ public class SimpleCanvas implements Canvas {
     /**
      * @return the background color of the canvas
      */
-    @Override
     public Color getColor() {
         return this.color;
     }

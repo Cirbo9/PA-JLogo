@@ -2,9 +2,9 @@ package PA.JLogo.app.test;
 
 import PA.JLogo.app.model.SimpleCanvas;
 import PA.JLogo.app.util.Coordinate2D;
+import java.awt.Color;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SimpleCanvasTest {
 
-    SimpleCanvas s = new SimpleCanvas(new ArrayList<>(), Color.red, 1920, 1080);
+    SimpleCanvas s = new SimpleCanvas(new ArrayList<>(), Color.RED, 1920, 1080);
 
     @Test
     public void testGetHomePosition() {

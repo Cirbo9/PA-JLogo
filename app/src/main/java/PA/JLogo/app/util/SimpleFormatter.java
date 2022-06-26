@@ -1,21 +1,21 @@
 package PA.JLogo.app.util;
 
+import PA.JLogo.app.io.CanvasWriter;
 import PA.JLogo.app.model.AbstractColoredElement;
 import PA.JLogo.app.model.Area;
 import PA.JLogo.app.model.Canvas;
 import PA.JLogo.app.model.Line;
+import java.awt.Color;
 
-import java.awt.*;
 import java.text.DecimalFormat;
 
-public class SimpleFormatter implements Formatter {
+public class SimpleFormatter implements CanvasWriter {
 
-    private static final DecimalFormat coordinateFormatter = new DecimalFormat("0");
+    private final DecimalFormat coordinateFormatter = new DecimalFormat("0");
 
     /**
      * @return the Coordinate formatted with int values
      */
-    @Override
     public String formatCoordinate(Coordinate2D c) {
         return coordinateFormatter.format(c.x()) + " " + coordinateFormatter.format(c.y());
     }
@@ -23,7 +23,6 @@ public class SimpleFormatter implements Formatter {
     /**
      * @return the formatted Line
      */
-    @Override
     public String formatElement(AbstractColoredElement element) {
         if (element.isFillable())
             return this.formatArea(element);
@@ -52,7 +51,6 @@ public class SimpleFormatter implements Formatter {
      * Formats the canvas in order to save it into a file
      * @return the formatted Canvas
      */
-    @Override
     public String formatCanvas(Canvas canvas) {
         String s = "SIZE " + canvas.getBase() + " " + canvas.getHeight() + " ";
         s += formatColor(canvas.getColor()) + "\n" ;

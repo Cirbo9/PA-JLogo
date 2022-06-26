@@ -1,6 +1,7 @@
 package PA.JLogo.app.model;
 
-import java.awt.*;
+import java.awt.Color;
+
 import java.util.ArrayList;
 
 public class Area extends AbstractColoredElement {

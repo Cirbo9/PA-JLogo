@@ -2,8 +2,8 @@ package PA.JLogo.app.model;
 
 import PA.JLogo.app.util.Coordinate2D;
 import PA.JLogo.app.util.CursorState;
+import java.awt.Color;
 
-import java.awt.*;
 import java.util.function.Function;
 
 import static PA.JLogo.app.util.CursorState.*;
@@ -15,7 +15,7 @@ public class SimpleCursor implements Cursor {
     private Color color;
     private Color areaColor;
     private int direction;
-    private int thickness;
+    private int penSize;
     private Coordinate2D currentPosition;
 
 
@@ -26,13 +26,13 @@ public class SimpleCursor implements Cursor {
                 this.currentPosition.y() + (px * sin(Math.toRadians(this.direction))));
     };
 
-    public SimpleCursor(CursorState state, Color color, Color areaColor, int direction, int thickness, Coordinate2D position) {
+    public SimpleCursor(CursorState state, Color color, Color areaColor, int direction, int penSize, Coordinate2D position) {
         this.state = state;
         this.color = color;
         this.areaColor = areaColor;
         this.direction = direction;
         this.currentPosition = position;
-        this.thickness = thickness;
+        this.penSize = penSize;
     }
 
     @Override
@@ -50,31 +50,28 @@ public class SimpleCursor implements Cursor {
         this.state = DOWN;
     }
 
-    public Coordinate2D getPosition() {
-        return this.currentPosition;
-    }
-
     @Override
-    public void home(){
-        //Todo implement
+    public void setPosition(Coordinate2D c) {
+        this.currentPosition = c;
     }
 
-    public Color getColor() {
+    public Color getPenColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    @Override
+    public void setPenColor(Color color) {
         this.color = color;
     }
 
-    public void setThickness(int t) {
-        this.thickness = t;
+    public void setPenSize(int t) {
+        this.penSize = t;
     }
 
     /**
      * @return the current color used to fill an enclosed area when it is created.
      */
-    public Color getAreaColor() {
+    public Color getFillColor() {
         return areaColor;
     }
 
@@ -83,7 +80,8 @@ public class SimpleCursor implements Cursor {
      *
      * @param newAreaColor the color to be set
      */
-    public void setAreaColor(Color newAreaColor) {
+    @Override
+    public void setFillColor(Color newAreaColor) {
         this.areaColor = newAreaColor;
     }
 
@@ -114,7 +112,7 @@ public class SimpleCursor implements Cursor {
      */
     @Override
     public Line forward(Canvas canvas, int px) {
-        return new Line(this.currentPosition, translation.apply(px), this.color, this.thickness);
+        return new Line(this.currentPosition, translation.apply(px), this.color, this.penSize);
     }
 
     /**
@@ -122,6 +120,6 @@ public class SimpleCursor implements Cursor {
      */
     @Override
     public Line backward(Canvas canvas, int px) {
-        return new Line(this.currentPosition, translation.apply(-px), this.color, this.thickness);
+        return new Line(this.currentPosition, translation.apply(-px), this.color, this.penSize);
     }
 }

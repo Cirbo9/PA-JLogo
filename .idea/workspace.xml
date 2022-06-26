@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="948d0c7b-d069-4923-96d0-1fde3ad17c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/ColoredElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Formatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/SimpleFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/AbstractColoredElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/AbstractColoredElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/ColoredElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/ColoredElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleLine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/Canvas2DOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCursorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Canvas2DOperations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Coordinate2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mynotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mynotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Formatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/SimpleFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/SimpleFormatter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +52,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +64,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="296s1X2ofaMDfiYraBGMGVtZWhs" />
   <component name="ProjectLevelVcsManager">
@@ -121,7 +118,7 @@
       <recent name="PA.JLogo.app.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SimpleCanvasTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.Main" />
       <module name="PioliMichele110388.app.main" />
@@ -166,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Canvas2DOperationsTest.testForwardTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PioliMichele110388.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="PA.JLogo.app.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
-      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.Canvas2DOperationsTest" />
-      <option name="METHOD_NAME" value="testForwardTranslation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimpleCanvasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PioliMichele110388.app.main" />
       <extension name="coverage">
@@ -197,13 +178,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimpleCanvasTest.testGetHomePosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.app.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.SimpleCanvasTest" />
+      <option name="METHOD_NAME" value="testGetHomePosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleCanvasTest" />
+        <item itemvalue="JUnit.SimpleCanvasTest.testGetHomePosition" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Canvas2DOperationsTest" />
         <item itemvalue="JUnit.Canvas2DOperationsTest.testBackwardTranslation" />
-        <item itemvalue="JUnit.Canvas2DOperationsTest.testForwardTranslation" />
-        <item itemvalue="JUnit.SimpleCanvasTest" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +265,12 @@
       <workItem from="1656057299473" duration="5835000" />
       <workItem from="1656074589509" duration="6624000" />
       <workItem from="1656159530471" duration="8368000" />
-      <workItem from="1656172613378" duration="5309000" />
+      <workItem from="1656172613378" duration="5345000" />
+      <workItem from="1656193127484" duration="2815000" />
+      <workItem from="1656231860139" duration="604000" />
+      <workItem from="1656238918417" duration="1729000" />
+      <workItem from="1656244938164" duration="1900000" />
+      <workItem from="1656255830209" duration="5764000" />
     </task>
     <servers />
   </component>

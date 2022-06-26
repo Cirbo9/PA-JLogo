@@ -5,9 +5,9 @@ import PA.JLogo.app.model.SimpleCursor;
 import PA.JLogo.app.util.Coordinate2D;
 import PA.JLogo.app.util.CursorState;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.awt.Color;
 
 public class App {
 
@@ -19,8 +19,8 @@ public class App {
 
     public void start() {
         CLIView view = new CLIView();
-        Controller controller = new Controller(new SimpleCanvas(new ArrayList<>(), Color.red,1000,800),
-                new SimpleCursor(CursorState.DOWN, Color.red, Color.red, 0, 2, new Coordinate2D(0.0, 0.0)));
+        Controller controller = new Controller(new SimpleCanvas(new ArrayList<>(), Color.RED,1000,800),
+                new SimpleCursor(CursorState.DOWN, Color.RED, Color.RED, 0, 2, new Coordinate2D(0.0, 0.0)));
         controller.init();
         String s;
         do {
