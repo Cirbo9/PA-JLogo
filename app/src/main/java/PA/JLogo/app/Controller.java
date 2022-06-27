@@ -6,10 +6,11 @@ import PA.JLogo.app.model.Canvas;
 import PA.JLogo.app.model.Cursor;
 import PA.JLogo.app.model.Line;
 import PA.JLogo.app.util.CursorState;
+import PA.JLogo.app.util.Validations;
+import PA.JLogo.app.view.LogoView;
 
 import java.awt.Color;
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Locale;
@@ -18,14 +19,13 @@ import java.util.StringTokenizer;
 public class Controller {
 
     private Canvas canvas;
-    private Cursor cursor;
+    private final Cursor cursor;
     private StringTokenizer tokenizer;
-    private LogoView view;
-    private CanvasWriter writer;
-    private CanvasLoader loader;
+    private final LogoView view;
+    private final CanvasWriter writer;
+    private final CanvasLoader loader;
     private Path currentPath = Paths.get("").toAbsolutePath();
-    private String filePath = currentPath.toString() + File.separator + "myCanvas.txt";
-
+    private String filePath = currentPath + File.separator + "myCanvas.jlogo";
 
     public Controller(Canvas canvas, Cursor cursor, LogoView view, CanvasWriter writer, CanvasLoader loader) {
         this.canvas = canvas;
@@ -40,7 +40,6 @@ public class Controller {
      */
     public void init()  {
         view.init();
-        System.out.println("File will be saved to: " + filePath);
         home();
     }
 
@@ -68,12 +67,11 @@ public class Controller {
     }
 
     /**
-     * Parses the command that the user typed. Some shortcuts are implemented
-     *
-     * @param command The line typed by the user
+     * Parses the command that the user typed. Shortcuts are implemented for some commands.
+     * @param commandToken a String containing only the command name.
      */
-    private void parseCommand(String command) throws IllegalArgumentException, IOException {
-        switch (command) {
+    private void parseCommand(String commandToken) throws Exception {
+        switch (commandToken) {
             case "forward":
             case "fd":
                 forward();
@@ -126,21 +124,25 @@ public class Controller {
             case "s":
                 save();
                 break;
+            case "load":
+            case "l":
+                load();
+                break;
             case "quit":
             case "exit":
             case "q":
                 return;
             default:
-                throw new IllegalArgumentException(command);
+                throw new Exception(commandToken);
         }
     }
 
     private void forward() {
-        penMovement(getTokenizerNextInt());
+        penMovement(Integer.parseInt(tokenizer.nextToken()));
     }
 
     private void backward() {
-        penMovement(-getTokenizerNextInt());
+        penMovement(-Integer.parseInt(tokenizer.nextToken()));
     }
 
     private void penMovement(int px) {
@@ -150,15 +152,16 @@ public class Controller {
     }
 
     private void left() {
-        cursor.rotateLeft(getTokenizerNextInt());
+        cursor.rotateLeft(Integer.parseInt(tokenizer.nextToken()));
     }
 
     private void right() {
-        cursor.rotateRight(getTokenizerNextInt());
+        cursor.rotateRight(Integer.parseInt(tokenizer.nextToken()));
     }
 
     private void clearscreen() {
         this.canvas.clear();
+        home();
     }
 
     private void home() {
@@ -193,23 +196,36 @@ public class Controller {
     }
 
     private void setPenSize() {
-        cursor.setPenSize(getTokenizerNextInt());
+        cursor.setPenSize(Integer.parseInt(tokenizer.nextToken()));
     }
 
-    private void repeat() {
-
+    private void repeat() throws Exception {
+        int repetitions = Integer.parseInt(tokenizer.nextToken());
+        try {
+            Validations.validateSyntax(tokenizer.nextToken(), "[");
+        } catch (Exception e) {
+            view.handleException(e);
+        }
+        for (int i = 0; i < repetitions; i++) {
+            parseCommand(tokenizer.nextToken());
+        }
     }
 
-    private int getTokenizerNextInt() {
-        return Integer.parseInt(tokenizer.nextToken());
+    private void save() {
+        try {
+            writer.write(Path.of(filePath), canvas);
+            view.fileSaveInfo(filePath);
+        } catch (Exception e) {
+            view.handleException(e);
+        }
     }
 
-    private void save() throws IOException {
-        writer.write(Path.of(filePath), canvas);
-    }
-
-    private void load() throws IOException {
-        loader.load(Path.of(filePath));
+    private void load() {
+        try {
+            this.canvas = loader.load(Path.of(filePath));
+        } catch (Exception e) {
+            view.handleException(e);
+        }
     }
 
 }

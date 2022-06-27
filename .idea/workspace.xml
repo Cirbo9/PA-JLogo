@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="948d0c7b-d069-4923-96d0-1fde3ad17c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/LogoView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/SimpleInterpreter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/test/ExecutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/test/io/CanvasLoadWriteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/CLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/CLIView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/CLIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/view/CLIView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/LogoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/view/LogoView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/CanvasWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/SimpleFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/SimpleFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Area.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Canvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Cursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/model/SimpleCursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/SimpleFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/io/SimpleFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCanvasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/test/model/SimpleCanvasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/test/SimpleCursorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/PA/JLogo/test/model/SimpleCursorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Validations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PA/JLogo/app/util/Validations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myCanvas.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +59,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,7 +71,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="296s1X2ofaMDfiYraBGMGVtZWhs" />
   <component name="ProjectLevelVcsManager">
@@ -82,8 +95,8 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mikyp/myWorkspace/PA-JLogo/app/src/main/java/PA/JLogo/app/test&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mikyp/myWorkspace/PA-JLogo/api&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -104,6 +117,8 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="PA.JLogo.test.model" />
+      <recent name="PA.JLogo.app.view" />
       <recent name="PA.JLogo.app.io" />
       <recent name="PA.JLogo.app" />
       <recent name="PA.JLogo.app.util" />
@@ -119,7 +134,7 @@
       <module name="PioliMichele110388.app.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="PA.JLogo.app.*" />
+          <option name="PATTERN" value="PA.JLogo.app.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,22 +157,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Canvas2DOperationsTest.testBackwardTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PioliMichele110388.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="PA.JLogo.app.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
-      <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.Canvas2DOperationsTest" />
-      <option name="METHOD_NAME" value="testBackwardTranslation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimpleCanvasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PioliMichele110388.app.main" />
       <extension name="coverage">
@@ -168,6 +167,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="PA.JLogo.app.test" />
       <option name="MAIN_CLASS_NAME" value="PA.JLogo.app.test.SimpleCanvasTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleCanvasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PioliMichele110388.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PA.JLogo.test.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PA.JLogo.test.model" />
+      <option name="MAIN_CLASS_NAME" value="PA.JLogo.test.model.SimpleCanvasTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -192,10 +206,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SimpleCanvasTest (1)" />
         <item itemvalue="JUnit.SimpleCanvasTest" />
         <item itemvalue="JUnit.SimpleCanvasTest.testGetHomePosition" />
         <item itemvalue="JUnit.Canvas2DOperationsTest" />
-        <item itemvalue="JUnit.Canvas2DOperationsTest.testBackwardTranslation" />
       </list>
     </recent_temporary>
   </component>
@@ -267,6 +281,10 @@
       <workItem from="1656244938164" duration="1900000" />
       <workItem from="1656255830209" duration="5856000" />
       <workItem from="1656318231245" duration="8976000" />
+      <workItem from="1656331827352" duration="13247000" />
+      <workItem from="1656349519093" duration="3880000" />
+      <workItem from="1656354517144" duration="1370000" />
+      <workItem from="1656356458842" duration="8949000" />
     </task>
     <servers />
   </component>

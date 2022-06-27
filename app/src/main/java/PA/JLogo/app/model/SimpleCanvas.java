@@ -19,17 +19,11 @@ public class SimpleCanvas implements Canvas {
         this.color = color;
     }
 
-    /**
-     * @return the base of the canvas
-     */
     @Override
     public int getBase() {
         return this.base;
     }
 
-    /**
-     * @return the height of the canvas
-     */
     @Override
     public int getHeight() {
         return this.height;
@@ -40,38 +34,21 @@ public class SimpleCanvas implements Canvas {
         return this.elements;
     }
 
-    /**
-     * @return the background color of the canvas
-     */
+    @Override
     public Color getColor() {
         return this.color;
     }
 
-    /**
-     * @param newColor the new background color of the canvas
-     */
+    @Override
     public void setColor(Color newColor) {
         this.color = newColor;
     }
 
-    /**
-     * Clears the canvas, in other words deletes all the user-made elements
-     */
     @Override
     public void clear() {
         this.elements.clear();
     }
 
-    /**
-     * @return the canvas as an ArrayList of user-made elements
-     */
-    public ArrayList<AbstractColoredElement> toArrayList() {
-        return this.elements;
-    }
-
-    /**
-     * @param e the element to be added to the canvas
-     */
     @Override
     public void add(AbstractColoredElement e) {
         this.elements.add(e);

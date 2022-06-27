@@ -7,7 +7,7 @@ import java.awt.Color;
 public class Line extends AbstractColoredElement {
     final Coordinate2D start;
     final Coordinate2D end;
-    int thickness;
+    final int thickness;
 
     public Line(Coordinate2D start, Coordinate2D end, Color color, int thickness) {
         super(color);

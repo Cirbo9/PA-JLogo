@@ -8,8 +8,11 @@ import javax.annotation.Nullable;
 public class Validations {
 
     @Contract("null -> fail")
-    public static void validateTranslation(@Nullable Coordinate2D c) throws ValidationException {
-        if (c == null)
+    public static void validateSyntax(@Nullable String token, String expectedToken) throws ValidationException {
+        if (token == null)
+            throw new ValidationException("Token was null");
+        if (!token.equals(expectedToken))
             throw new ValidationException("");
     }
+
 }

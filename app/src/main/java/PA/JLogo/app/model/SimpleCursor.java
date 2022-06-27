@@ -18,13 +18,13 @@ public class SimpleCursor implements Cursor {
     private int penSize;
     private Coordinate2D currentPosition;
 
-
-    private Function<Integer, Coordinate2D> translation = (px) -> {
-        if (px == 0)
-            return this.currentPosition;
-        return new Coordinate2D(this.currentPosition.x() + (px * cos(Math.toRadians(this.direction))),
-                this.currentPosition.y() + (px * sin(Math.toRadians(this.direction))));
-    };
+    /**
+     * Represents a translation function which takes a Coordinate and returns the same Coordinate translated
+     * by the distance and the angle specified
+     */
+    private final Function<Integer, Coordinate2D> translation = (px) ->
+            new Coordinate2D(this.currentPosition.x() + (px * cos(Math.toRadians(this.direction))),
+            this.currentPosition.y() + (px * sin(Math.toRadians(this.direction))));
 
     public SimpleCursor(CursorState state, Color color, Color areaColor, int direction, int penSize, Coordinate2D position) {
         this.state = state;
@@ -55,10 +55,6 @@ public class SimpleCursor implements Cursor {
         this.currentPosition = c;
     }
 
-    public Color getPenColor() {
-        return color;
-    }
-
     @Override
     public void setPenColor(Color color) {
         this.color = color;
@@ -68,32 +64,11 @@ public class SimpleCursor implements Cursor {
         this.penSize = t;
     }
 
-    /**
-     * @return the current color used to fill an enclosed area when it is created.
-     */
-    public Color getFillColor() {
-        return areaColor;
-    }
-
-    /**
-     * Sets the color which will be used to fill an enclosed area next time it will be created.
-     *
-     * @param newAreaColor the color to be set
-     */
     @Override
     public void setFillColor(Color newAreaColor) {
         this.areaColor = newAreaColor;
     }
 
-    public int getDirection() {
-        return direction;
-    }
-
-    /**
-     * Rotates the cursor clockwise by [rotation] degrees
-     *
-     * @param rotation how much the cursor has to rotate
-     */
     @Override
     public void rotateLeft(int rotation) {
         this.direction = (this.direction + rotation) % 360;
@@ -107,21 +82,12 @@ public class SimpleCursor implements Cursor {
         this.direction -= r;
     }
 
-    /**
-     * @param px how much the cursor has to move forward
-     */
     @Override
     public Line forward(Canvas canvas, int px) {
+        if (px == 0)
+            return null;
         Coordinate2D start = this.currentPosition;
         this.currentPosition = this.translation.apply(px);
         return new Line(start, this.currentPosition, this.color, this.penSize);
-    }
-
-    /**
-     * @param px how much the cursor has to move backward
-     */
-    @Override
-    public Line backward(Canvas canvas, int px) {
-        return new Line(this.currentPosition, translation.apply(-px), this.color, this.penSize);
     }
 }
