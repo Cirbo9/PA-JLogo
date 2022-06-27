@@ -112,7 +112,9 @@ public class SimpleCursor implements Cursor {
      */
     @Override
     public Line forward(Canvas canvas, int px) {
-        return new Line(this.currentPosition, translation.apply(px), this.color, this.penSize);
+        Coordinate2D start = this.currentPosition;
+        this.currentPosition = this.translation.apply(px);
+        return new Line(start, this.currentPosition, this.color, this.penSize);
     }
 
     /**

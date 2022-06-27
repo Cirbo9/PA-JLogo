@@ -19,6 +19,7 @@ public interface Canvas {
     void add(AbstractColoredElement e);
     int getBase();
     int getHeight();
+    Color getColor();
     void setColor(Color bgColor);
 
     /**

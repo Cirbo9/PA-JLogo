@@ -1,11 +1,17 @@
 package PA.JLogo.app;
 
+import PA.JLogo.app.io.CanvasLoader;
+import PA.JLogo.app.io.CanvasWriter;
 import PA.JLogo.app.model.Canvas;
 import PA.JLogo.app.model.Cursor;
 import PA.JLogo.app.model.Line;
 import PA.JLogo.app.util.CursorState;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
@@ -14,27 +20,59 @@ public class Controller {
     private Canvas canvas;
     private Cursor cursor;
     private StringTokenizer tokenizer;
+    private LogoView view;
+    private CanvasWriter writer;
+    private CanvasLoader loader;
+    private Path currentPath = Paths.get("").toAbsolutePath();
+    private String filePath = currentPath.toString() + File.separator + "myCanvas.txt";
 
-    public Controller(Canvas canvas, Cursor cursor) {
+
+    public Controller(Canvas canvas, Cursor cursor, LogoView view, CanvasWriter writer, CanvasLoader loader) {
         this.canvas = canvas;
         this.cursor = cursor;
+        this.view = view;
+        this.writer = writer;
+        this.loader = loader;
     }
 
     /**
-     * This is the procedure to initializing the canvas (setting base and height)
+     * Apply some initialization settings
      */
-    public void init() {
-        //utente deve inserire misure del canvas
+    public void init()  {
+        view.init();
+        System.out.println("File will be saved to: " + filePath);
+        home();
     }
 
     /**
-     * Parses the command that the user typed
+     * General behavior of the program
+     */
+    public void execute() {
+        init();
+        String s;
+        do {
+            s = view.getNextUserInput();
+            tokenizer = new StringTokenizer(s, " ");
+            try {
+                while (tokenizer.hasMoreTokens()) {
+                    parseCommand(tokenizer.nextToken().toLowerCase(Locale.ROOT));
+                }
+            } catch (Exception e) {
+                view.handleCommandNotFound(e);
+            }
+        } while (!isExitCommand(s));
+    }
+
+    private boolean isExitCommand(String s) {
+        return (s.equals("exit") || s.equals("quit") || s.equals("q"));
+    }
+
+    /**
+     * Parses the command that the user typed. Some shortcuts are implemented
      *
-     * @param userInput The line typed by the user
+     * @param command The line typed by the user
      */
-    public void interpret(String userInput) throws IllegalArgumentException {
-        tokenizer = new StringTokenizer(userInput, " ");
-        String command = tokenizer.nextToken().toLowerCase(Locale.ROOT);
+    private void parseCommand(String command) throws IllegalArgumentException, IOException {
         switch (command) {
             case "forward":
             case "fd":
@@ -59,15 +97,15 @@ public class Controller {
                 this.home();
                 break;
             case "help":
-                printHelp();
+                view.printHelpMessage();
                 break;
             case "penup":
             case "up":
-                this.cursor.up();
+                penup();
                 break;
             case "pendown":
             case "down":
-                this.cursor.down();
+                pendown();
                 break;
             case "setpencolor":
                 setPenColor();
@@ -84,6 +122,10 @@ public class Controller {
             case "repeat":
                 repeat();
                 break;
+            case "save":
+            case "s":
+                save();
+                break;
             case "quit":
             case "exit":
             case "q":
@@ -91,18 +133,14 @@ public class Controller {
             default:
                 throw new IllegalArgumentException(command);
         }
-
-
     }
 
     private void forward() {
-        int px = Integer.parseInt(tokenizer.nextToken());
-        penMovement(px);
+        penMovement(getTokenizerNextInt());
     }
 
     private void backward() {
-        int px = Integer.parseInt(tokenizer.nextToken());
-        penMovement(-px);
+        penMovement(-getTokenizerNextInt());
     }
 
     private void penMovement(int px) {
@@ -112,13 +150,11 @@ public class Controller {
     }
 
     private void left() {
-        int px = Integer.parseInt(tokenizer.nextToken());
-        cursor.rotateLeft(px);
+        cursor.rotateLeft(getTokenizerNextInt());
     }
 
     private void right() {
-        int px = Integer.parseInt(tokenizer.nextToken());
-        cursor.rotateRight(px);
+        cursor.rotateRight(getTokenizerNextInt());
     }
 
     private void clearscreen() {
@@ -157,15 +193,23 @@ public class Controller {
     }
 
     private void setPenSize() {
-
+        cursor.setPenSize(getTokenizerNextInt());
     }
 
     private void repeat() {
 
     }
 
-    private void printHelp() {
-        System.out.println("Welcome to JLogo");
+    private int getTokenizerNextInt() {
+        return Integer.parseInt(tokenizer.nextToken());
+    }
+
+    private void save() throws IOException {
+        writer.write(Path.of(filePath), canvas);
+    }
+
+    private void load() throws IOException {
+        loader.load(Path.of(filePath));
     }
 
 }

@@ -12,6 +12,7 @@ public interface Cursor {
     void down();
     void setPenColor(Color color);
     void setFillColor(Color color);
+    void setPenSize(int size);
     void rotateLeft(int rotation);
     void rotateRight(int rotation);
     void setPosition(Coordinate2D c);

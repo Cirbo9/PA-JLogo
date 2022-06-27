@@ -1,10 +1,11 @@
-package PA.JLogo.app.util;
+package PA.JLogo.app.io;
 
-import PA.JLogo.app.io.CanvasWriter;
 import PA.JLogo.app.model.AbstractColoredElement;
 import PA.JLogo.app.model.Area;
 import PA.JLogo.app.model.Canvas;
 import PA.JLogo.app.model.Line;
+import PA.JLogo.app.util.Coordinate2D;
+
 import java.awt.Color;
 
 import java.text.DecimalFormat;

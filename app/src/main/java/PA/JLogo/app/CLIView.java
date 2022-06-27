@@ -2,7 +2,7 @@ package PA.JLogo.app;
 
 import java.util.Scanner;
 
-public class CLIView {
+public class CLIView implements LogoView {
 
     public final Scanner keyboard;
 
@@ -15,7 +15,7 @@ public class CLIView {
     }
 
     private void printWelcomeMessage() {
-
+        System.out.println("Welcome to JLogo.");
     }
 
     public String getNextUserInput() {
@@ -23,16 +23,29 @@ public class CLIView {
         return this.keyboard.nextLine();
     }
 
-    public int getInt() {
-        return keyboard.nextInt();
-    }
-
     public void printHelpMessage() {
-
+        System.out.println("Possible commands:\n" +
+                "forward <dist>\n" +
+                "backward <dist>\n" +
+                "left <angle>\n" +
+                "right <angle>\n" +
+                "clearscreen\n" +
+                "home\n" +
+                "penup\n" +
+                "pendown\n" +
+                "setpencolor <byte> <byte> <byte>\n" +
+                "setfillcolor <byte> <byte> <byte>\n" +
+                "setscreencolor <byte> <byte> <byte>\n" +
+                "setpensize <size>\n" +
+                "repeat <num> [ <commands> ]\n");
     }
 
-    public void handleCommandNotFoundException(IllegalArgumentException e) {
+    public void handleCommandNotFound(Exception e) {
         System.out.println(e.getMessage() + ": command not found.");
+    }
+
+    public void handleException(Exception e) {
+        System.out.println("Error: " + e.getMessage());
     }
 
 }
