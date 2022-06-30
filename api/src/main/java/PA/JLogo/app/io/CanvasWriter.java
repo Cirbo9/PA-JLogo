@@ -1,6 +1,7 @@
-package PA.JLogo.app.io;
+package src.main.java.PA.JLogo.app.io;
 
-import PA.JLogo.app.model.Canvas;
+
+import src.main.java.PA.JLogo.app.model.Canvas;
 
 import java.io.IOException;
 import java.nio.file.Files;

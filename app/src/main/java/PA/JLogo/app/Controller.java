@@ -1,15 +1,15 @@
 package PA.JLogo.app;
 
-import PA.JLogo.app.io.CanvasLoader;
-import PA.JLogo.app.io.CanvasWriter;
-import PA.JLogo.app.model.Canvas;
-import PA.JLogo.app.model.Cursor;
-import PA.JLogo.app.model.Line;
-import PA.JLogo.app.util.CursorState;
-import PA.JLogo.app.util.Validations;
 import PA.JLogo.app.view.LogoView;
+import src.main.java.PA.JLogo.app.io.CanvasLoader;
+import src.main.java.PA.JLogo.app.io.CanvasWriter;
+import src.main.java.PA.JLogo.app.model.Canvas;
+import src.main.java.PA.JLogo.app.model.Cursor;
+import src.main.java.PA.JLogo.app.model.Line;
+import src.main.java.PA.JLogo.app.util.CursorState;
+import src.main.java.PA.JLogo.app.util.Validations;
 
-import java.awt.Color;
+import java.awt.*;
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;

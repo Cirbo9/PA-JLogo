@@ -1,7 +1,7 @@
-package PA.JLogo.app.model;
+package src.main.java.PA.JLogo.app.model;
 
-import PA.JLogo.app.util.Coordinate2D;
-import PA.JLogo.app.util.CursorState;
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
+import src.main.java.PA.JLogo.app.util.CursorState;
 
 import java.awt.*;
 

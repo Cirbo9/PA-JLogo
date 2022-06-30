@@ -1,8 +1,9 @@
-package PA.JLogo.app.model;
+package src.main.java.PA.JLogo.app.model;
 
-import PA.JLogo.app.util.Coordinate2D;
-import java.awt.Color;
 
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
+
+import java.awt.*;
 import java.util.List;
 
 /**

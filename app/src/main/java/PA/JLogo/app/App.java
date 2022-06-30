@@ -1,16 +1,15 @@
 package PA.JLogo.app;
 
-import PA.JLogo.app.io.SimpleFormatter;
-import PA.JLogo.app.io.SimpleInterpreter;
-import PA.JLogo.app.model.SimpleCanvas;
-import PA.JLogo.app.model.SimpleCursor;
-import PA.JLogo.app.util.Coordinate2D;
-import PA.JLogo.app.util.CursorState;
 import PA.JLogo.app.view.CLIView;
+import src.main.java.PA.JLogo.app.io.SimpleFormatter;
+import src.main.java.PA.JLogo.app.io.SimpleInterpreter;
+import src.main.java.PA.JLogo.app.model.SimpleCanvas;
+import src.main.java.PA.JLogo.app.model.SimpleCursor;
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
+import src.main.java.PA.JLogo.app.util.CursorState;
 
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.awt.Color;
+import java.util.ArrayList;
 
 public class App {
 

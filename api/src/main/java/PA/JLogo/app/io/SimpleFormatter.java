@@ -1,13 +1,13 @@
-package PA.JLogo.app.io;
+package src.main.java.PA.JLogo.app.io;
 
-import PA.JLogo.app.model.AbstractColoredElement;
-import PA.JLogo.app.model.Area;
-import PA.JLogo.app.model.Canvas;
-import PA.JLogo.app.model.Line;
-import PA.JLogo.app.util.Coordinate2D;
 
-import java.awt.Color;
+import src.main.java.PA.JLogo.app.model.AbstractColoredElement;
+import src.main.java.PA.JLogo.app.model.Area;
+import src.main.java.PA.JLogo.app.model.Canvas;
+import src.main.java.PA.JLogo.app.model.Line;
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
 
+import java.awt.*;
 import java.text.DecimalFormat;
 
 public class SimpleFormatter implements CanvasWriter {

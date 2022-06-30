@@ -1,4 +1,4 @@
-package PA.JLogo.app.util;
+package src.main.java.PA.JLogo.app.util;
 
 import org.gradle.internal.impldep.jakarta.xml.bind.ValidationException;
 import org.gradle.internal.impldep.org.jetbrains.annotations.Contract;
