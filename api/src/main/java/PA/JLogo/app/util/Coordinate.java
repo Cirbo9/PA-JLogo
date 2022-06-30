@@ -1,4 +1,4 @@
-package PA.JLogo.app.util;
+package src.main.java.PA.JLogo.app.util;
 
 public interface Coordinate {
 

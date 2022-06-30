@@ -1,10 +1,10 @@
 package PA.JLogo.test.model;
 
-import PA.JLogo.app.model.SimpleCanvas;
-import PA.JLogo.app.util.Coordinate2D;
-import java.awt.Color;
 import org.junit.jupiter.api.Test;
+import src.main.java.PA.JLogo.app.model.SimpleCanvas;
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

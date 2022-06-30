@@ -1,9 +1,9 @@
 package PA.JLogo.test.model;
 
-import PA.JLogo.app.model.SimpleCursor;
-import PA.JLogo.app.util.Coordinate2D;
-import PA.JLogo.app.util.CursorState;
 import org.junit.jupiter.api.Test;
+import src.main.java.PA.JLogo.app.model.SimpleCursor;
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
+import src.main.java.PA.JLogo.app.util.CursorState;
 
 import java.awt.*;
 

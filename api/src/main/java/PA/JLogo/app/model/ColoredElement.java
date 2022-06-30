@@ -1,7 +1,7 @@
-package PA.JLogo.app.model;
+package src.main.java.PA.JLogo.app.model;
 
 
-import java.awt.Color;
+import java.awt.*;
 
 public interface ColoredElement {
 

@@ -1,14 +1,15 @@
-package PA.JLogo.app.model;
+package src.main.java.PA.JLogo.app.model;
 
-import PA.JLogo.app.util.Coordinate2D;
-import PA.JLogo.app.util.CursorState;
+import src.main.java.PA.JLogo.app.util.Coordinate2D;
+import src.main.java.PA.JLogo.app.util.CursorState;
+
 import java.awt.Color;
-
 import java.util.function.Function;
 
-import static PA.JLogo.app.util.CursorState.*;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
+import static src.main.java.PA.JLogo.app.util.CursorState.DOWN;
+import static src.main.java.PA.JLogo.app.util.CursorState.UP;
 
 public class SimpleCursor implements Cursor {
     private CursorState state;
